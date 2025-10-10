@@ -22,8 +22,8 @@
    * macOS: [Windows App from Mac App Store](https://apps.apple.com/gb/app/windows-app/id1295203466?mt=12)
    * Linux: Install Remmina from your package manager
 5. For login use:
-   > [!NOTE]
-   > The username may sometimes be ~/student depending on the RDP client
+> [!NOTE]
+> The username may sometimes be ~/student depending on the RDP client
    * Username: student
    * Password: CSC8112!
 
