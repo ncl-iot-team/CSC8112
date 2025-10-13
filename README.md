@@ -101,6 +101,7 @@ For Python packages
 
 ![task4](img/task4.png)
 
+> **NOTE:** Labelled data for task 4 - [Data](data/PM2.5_labelled_data.csv)
 ## Troubleshooting
 
 ### VM Failed to restore
