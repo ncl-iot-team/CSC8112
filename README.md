@@ -99,6 +99,8 @@ For Python packages
 
 ![task3](img/task3.png)
 
+![task4](img/task4.png)
+
 ## Troubleshooting
 
 ### VM Failed to restore
