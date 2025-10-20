@@ -45,7 +45,7 @@ Select the virtual machine here, click "Start" and "Connect"
 ## Provided software
 
 > [!TIP]
-> You have Administrator privleges in the Azure lab. If there's any additional software you need, you can install it here
+> You have Administrator privileges in the Azure lab. If there's any additional software you need, you can install it here
 
 You have the following software out of the box:
 
