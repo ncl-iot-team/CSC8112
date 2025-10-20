@@ -66,7 +66,15 @@ You can copy files and paste into the Azure lab
 
 Open MobaXterm, you should see two configurations. Cloud and Edge.
 
-Double click and enter the password. The file manager should appear on the left.
+> [!NOTE]
+> If facing any issue with MobaXterm access, edit the session and replace existing session name in "Remote host" with their IP address and save it. Make sure VMs are turned on in Hyper-V manager already.
+
+![moba](img/moba2.png)
+
+Below are the IP address for both edge and cloud.
+![vmip](img/VM-ip.png)
+
+Finally, double click the VM and enter the password. The file manager should appear on the left.
 
 ![moba](img/moba.png)
 
@@ -101,7 +109,8 @@ For Python packages
 
 ![task4](img/task4.png)
 
-> **NOTE:** Labelled data for task 4 - [Data](data/PM2.5_labelled_data.csv)
+> [!NOTE]
+> Labelled data for task 4 - [Data](data/PM2.5_labelled_data.csv)
 ## Troubleshooting
 
 ### VM Failed to restore
