@@ -92,7 +92,7 @@ For Python packages
 | Package name | Version |
 | --- | --- |
 | requests | 2.28.1 |
-| paho.mqtt | 1.6.1 | 
+| paho-mqtt | 1.6.1 | 
 | pika | 1.3.0 |
 | prophet | 1.1.1 |
 | matplotlib | 3.6.0 |
