@@ -3,7 +3,7 @@
 | Table of contents |
 | --- |
 | [Getting started](#getting-started) |
-| [Inside the Azure lab](#inside-the-azure-lab) |
+| [File transfer from your computer](#file-transfer-from-your-computer) |
 | [Provided software](#provided-software) |
 | [Software and library needed for coursework](#software-and-libraries-needed-for-coursework) |
 | [Architecture for each task](#architecture-for-each-task) |
@@ -11,72 +11,46 @@
 
 ## Getting started
 
-> [!WARNING]
-> Remember to shut down the lab when you are not using it!
+Go to <https:://ncl.apporto.com> and login with your school account.
 
-1. Access Azure lab at <https://labs.azure.com>. Login with your school account
-2. Turn on the VM for CSC8112. This should take a few minutes
-3. Click the toggle to turn it on and the computer icon to download an .rdp file
-4. To access, prepare the following RDP clients
-   * Windows: Nothing. Run the .rdp file directly
-   * macOS: [Windows App from Mac App Store](https://apps.apple.com/gb/app/windows-app/id1295203466?mt=12)
-   * Linux: Install Remmina from your package manager
-5. For login use:
-> [!NOTE]
-> The username may sometimes be ~/student depending on the RDP client
-   * Username: student
-   * Password: CSC8112!
+Click Launch to connect
 
-## Inside the Azure lab
+![](img/apporto.png)
 
-> [!TIP]
-> We recommend doing your work on the Windows host first, then transfer the files to the VM for faster performance.
+## File transfer from your computer
 
-Close the server manager, and you should see the desktop.
+This uses VS Code's Remote Tunnels feature to connect VS Code on your own computer to the Apporto VM, so you can transfer files between them.
 
-Open Hyper-V manager, and you should see two virtual machine labelled Cloud and Edge
+> [!IMPORTANT]
+> You will need VS Code installed on your OWN computer for this to work.
 
-![lab-desktop](img/SCR-20251009-olcr.png)
+1. **In the Apporto VM**, launch VS Code and install the **Remote Tunnels** extension from the Extensions Marketplace.
+2. **In the Apporto VM**, click the account icon in the bottom-left corner of VS Code and select **Turn on Remote Tunnel Access...**
 
-Select the virtual machine here, click "Start" and "Connect"
+    ![](img/code-tunnel.png)
 
-![start](img/vm-control.jpeg)
+3. Select **Install as a service**. Choose "use weak encryption" if prompted.
+ > [!NOTE]
+ > You can use your personal account for this step.
+4. Choose either **Sign in with GitHub** or **Sign in with Microsoft**
+5. Wait until VS Code reports that the tunnel is active (you'll see a notification, and the account icon will show a green tunnel indicator)
+6. **On your own computer**, Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and run **Remote Tunnels: Connect to Tunnel...**
+    * Sign in with the same account you used in the Apporto VM
+    * Select the VM's tunnel from the list (it will be named after the VM's hostname)
+7. Once connected, open the folder you want to work with on the VM (e.g. **File > Open Folder...**)
+8. You can now drag and drop files between your computer and the VM directly in the VS Code Explorer, or use the integrated terminal to copy files across
+
 
 ## Provided software
 
 > [!TIP]
-> You have Administrator privileges in the Azure lab. If there's any additional software you need, you can install it here
+> You have sudo privileges in the VM. If there's any additional software you need, you can install it here
 
 You have the following software out of the box:
 
-* MobaXterm
-  * For transferring files from the Windows host to Linxu VM
-* IntelliJ IDEA
-  * Java IDE
-* Docker and docker compose (In the VM)
-* Python 3 (In the VM)
-
-### Transferring files
-
-#### From your computer to Azure lab
-
-You can copy files and paste into the Azure lab
-
-#### From Azure lab Windows host to Edge/Cloud VM
-
-Open MobaXterm, you should see two configurations. Cloud and Edge.
-
-> [!NOTE]
-> If facing any issue with MobaXterm access, edit the session and replace existing session name in "Remote host" with their IP address and save it. Make sure VMs are turned on in Hyper-V manager already.
-
-![moba](img/moba2.png)
-
-Below are the IP address for both edge and cloud.
-![vmip](img/VM-ip.png)
-
-Finally, double click the VM and enter the password. The file manager should appear on the left.
-
-![moba](img/moba.png)
+* Visual Studio Code
+* Docker and docker compose
+* Python 3
 
 ## Software and libraries needed for coursework
 
@@ -111,16 +85,8 @@ For Python packages
 
 > [!NOTE]
 > Labelled data for task 4 - [Data](data/PM2.5_labelled_data.csv)
+
 ## Troubleshooting
-
-### VM Failed to restore
-
-If you see this message box, click "Delete saved state" for that virtual machine before starting
-
-> [!CAUTION]
-> Be careful do not click "Delete"!
-
-![error](img/fail-restore.png)
 
 ### Docker logs failed to print output
 
