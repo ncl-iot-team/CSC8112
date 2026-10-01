@@ -6,6 +6,7 @@
 | [File transfer from your computer](#file-transfer-from-your-computer) |
 | [Provided software](#provided-software) |
 | [Software and library needed for coursework](#software-and-libraries-needed-for-coursework) |
+| [Docker images required for coursework](#docker-images-required-for-coursework) |
 | [Architecture for each task](#architecture-for-each-task) |
 | [Troubleshooting](#troubleshooting) |
 
@@ -40,7 +41,6 @@ This uses VS Code's Remote Tunnels feature to connect VS Code on your own comput
 7. Once connected, open the folder you want to work with on the VM (e.g. **File > Open Folder...**)
 8. You can now drag and drop files between your computer and the VM directly in the VS Code Explorer, or use the integrated terminal to copy files across
 
-
 ## Provided software
 
 > [!TIP]
@@ -51,6 +51,16 @@ You have the following software out of the box:
 * Visual Studio Code
 * Docker and docker compose
 * Python 3
+
+## Docker images required for coursework
+
+> [!TIP]
+> Copy the link below and type `docker import <url> <imagename>:latest` to import the image
+
+* [Virtual camera](data/virtualcamera_amd64.tar)
+  * Exposes at port 8081
+* [Dashboard](data/dashboard_amd64.tar)
+  * Exposes at port 8000
 
 ## Software and libraries needed for coursework
 
