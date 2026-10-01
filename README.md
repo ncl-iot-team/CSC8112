@@ -57,10 +57,10 @@ You have the following software out of the box:
 > [!TIP]
 > Copy the link below and type `docker import <url> <imagename>:latest` to import the image
 
-* [Virtual camera](data/virtualcamera_amd64.tar)
-  * Exposes at port 8081
-* [Dashboard](data/dashboard_amd64.tar)
-  * Exposes at port 8000
+* [Virtual camera](data/virtualcamera/virtualcamera_amd64.tar)
+  * [README](data/virtualcamera/README.md)
+* [Dashboard](data/dashboard/dashboard-1.0.tar)
+  * [README](data/dashboard/README.md)
 
 ## Software and libraries needed for coursework
 
