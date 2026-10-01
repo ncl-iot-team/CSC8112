@@ -6,7 +6,7 @@
 | [File transfer from your computer](#file-transfer-from-your-computer) |
 | [Provided software](#provided-software) |
 | [Software and library needed for coursework](#software-and-libraries-needed-for-coursework) |
-| [Docker images required for coursework](#docker-images-required-for-coursework) |
+| [Services within the VM](#docker-images-required-for-coursework) |
 | [Architecture for each task](#architecture-for-each-task) |
 | [Troubleshooting](#troubleshooting) |
 
@@ -52,15 +52,17 @@ You have the following software out of the box:
 * Docker and docker compose
 * Python 3
 
-## Docker images required for coursework
+## Services within the VM
 
-> [!TIP]
-> Copy the link below and type `docker import <url> <imagename>:latest` to import the image
+The following services are available within the VM:
 
-* [Virtual camera](data/virtualcamera/virtualcamera_amd64.tar)
-  * [README](data/virtualcamera/README.md)
-* [Dashboard](data/dashboard/dashboard-1.0.tar)
-  * [README](data/dashboard/README.md)
+* **Virtual camera**: A virtual camera that can be used for the coursework.
+  * Camera frames can be accessed via `curl http://smartcam.uo.ncl.ac.uk:8001/camera`
+  * Sensor values can be accessed via `curl http://smartcam.uo.ncl.ac.uk:8001/sensor`
+  * The smart camera reports new data every 5 seconds. Each data reported is about 10 minutes of data.
+* **Dashboard**: A dashboard for visualizing the data from the virtual camera.
+  * The dashboard can be accessed via `http://dashboard.cloud.ncl.ac.uk:8000/`
+  * Read the [dashboard README](data/dashboard/README.md) for more information on how to use the dashboard.
 
 ## Software and libraries needed for coursework
 
