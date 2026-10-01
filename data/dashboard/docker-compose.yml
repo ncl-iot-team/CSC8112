@@ -1,0 +1,11 @@
+services:
+  dashboard:
+    image: dashboard:1.0
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - dashboard-data:/data
+    restart: unless-stopped
+
+volumes:
+  dashboard-data:
