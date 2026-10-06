@@ -1,5 +1,16 @@
 # Quality Dashboard
 
+Requires Docker (with Docker Compose).
+
+## Start
+
+Put `dashboard-cloud.tar`, `docker-compose.yml` in one folder, then run in that folder:
+
+```bash
+docker load -i dashboard-cloud.tar
+docker compose up -d
+```
+
 Open http://dashboard.cloud.ncl.ac.uk:8000/ in your browser to view the dashboard.
 
 Interactive API docs: http://dashboard.cloud.ncl.ac.uk:8000/docs
@@ -8,12 +19,12 @@ Interactive API docs: http://dashboard.cloud.ncl.ac.uk:8000/docs
 
 Base URL: `http://dashboard.cloud.ncl.ac.uk:8000`.
 
-Record fields: `id`, `timestamp` (UK time, ISO 8601), `value` (float), `predicted_quality` (text), `image_ext`.
+Record fields: `id`, `timestamp` (epoch seconds, float, required, set by you), `value` (float), `predicted_quality` (text),`uploaded_at` (UTC, ISO 8601, set by the server, optional override), `image_ext`.
 
-1. Create (multipart form; `timestamp` is optional and defaults to now):
+1. Create (multipart form; `timestamp` is required; uploaded_at is optional and defaults to now:
 
 ```bash
-curl -F value=0.82 -F predicted_quality=good -F image=@sample.jpg http://dashboard.cloud.ncl.ac.uk:8000/api/records
+curl -F timestamp=1760000000 -F value=0.82 -F predicted_quality=good -F image=@sample.jpg http://dashboard.cloud.ncl.ac.uk:8000/api/records
 ```
 
 2. List (supports `offset` and `limit`, max 200):
@@ -55,7 +66,7 @@ Image rules: JPEG, PNG or WEBP, max 10 MB.
 import requests
 with open("sample.jpg", "rb") as f:
     r = requests.post("http://dashboard.cloud.ncl.ac.uk:8000/api/records",
-                      data={"value": 0.82, "predicted_quality": "good"},
+                      data={"timestamp": 1760000000, "value": 0.82, "predicted_quality": "good"},
                       files={"image": f})
 print(r.json())
 ```
