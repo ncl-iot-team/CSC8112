@@ -54,6 +54,7 @@ You have the following software out of the box:
 
 ## Services within the VM
 
+![vm](img/specification-ubuntu_vms_v0.1.png)
 The following services are available within the VM:
 
 * **Virtual camera**: A virtual camera that can be used for the coursework.
@@ -85,18 +86,22 @@ For Python packages
 | tensorflow | 2.13.1 |
 | numpy | 1.24.3 |
 
+## Overall Architecture
+![tasks](img/total-task-arch.png)
 ## Architecture for each task
-
-![task1](img/task1.png)
-
-![task2](img/task2.png)
-
-![task3](img/task3.png)
-
+### Task 1
+![task1](img/specification-task1_v1.0.png)
+### Task 2
+![task2](img/specification-task2-v1.0.png)
+### Task 3 (need to update)
+![task3](img/task3.png) 
+### Task 4 (need to update)
 ![task4](img/task4.png)
-
 > [!NOTE]
 > Labelled data for task 4 - [Data](data/PM2.5_labelled_data.csv)
+### Task 5
+![task5](img/specification-task5-v1.0.png)
+
 
 ## Troubleshooting
 
