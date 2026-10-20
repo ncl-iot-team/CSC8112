@@ -94,7 +94,7 @@ For Python packages
 ### Task 2
 ![task2](img/specification-task2-v1.0.png)
 ### Task 3 (need to update)
-![task3](img/task3.png) 
+![task3](img/specification-Task3_v0.1.drawio.png) 
 ### Task 4 (need to update)
 ![task4](img/task4.png)
 > [!NOTE]
