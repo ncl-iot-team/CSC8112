@@ -90,7 +90,7 @@ For Python packages
 ![tasks](img/total-task-arch.png)
 ## Architecture for each task
 ### Task 1
-![task1](img/specification-task1_v1.0.png)
+![task1](img/specification-Task1_v1.0.png)
 ### Task 2
 ![task2](img/specification-task2-v1.0.png)
 ### Task 3
