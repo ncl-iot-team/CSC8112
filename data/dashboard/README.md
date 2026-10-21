@@ -24,7 +24,7 @@ Record fields: `id`, `timestamp` (epoch seconds, float, required, set by you), `
 1. Create (multipart form; `timestamp` is required; uploaded_at is optional and defaults to now:
 
 ```bash
-curl -F timestamp=1760000000 -F value=0.82 -F predicted_quality=good -F image=@sample.jpg http://dashboard.cloud.ncl.ac.uk:8000/api/records
+curl -X POST http://dashboard.cloud.ncl.ac.uk:8000/api/records -F timestamp=1760000000 -F value=0.82 -F predicted_quality=good -F image=@img\<image-filename> 
 ```
 
 2. List (supports `offset` and `limit`, max 200):

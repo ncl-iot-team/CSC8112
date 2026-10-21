@@ -93,9 +93,9 @@ For Python packages
 ![task1](img/specification-task1_v1.0.png)
 ### Task 2
 ![task2](img/specification-task2-v1.0.png)
-### Task 3 (need to update)
+### Task 3
 ![task3](img/task3.png) 
-### Task 4 (need to update)
+### Task 4
 ![task4](img/task4.png)
 > [!NOTE]
 > Labelled data for task 4 - [Data](data/PM2.5_labelled_data.csv)
