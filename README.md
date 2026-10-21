@@ -108,3 +108,11 @@ For Python packages
 ### Docker logs failed to print output
 
 Add `PYTHONUNBUFFERED=1` to your environment variable in your Docker image.
+
+### Visualising MQTT messages
+
+To check that messages are actually being published/received on your broker, use [MQTTX](https://mqttx.app/) to connect to the broker, subscribe to your topic (e.g. `#` for all topics) and inspect the incoming payloads.
+
+![MQTTX connection](img/MQTTX-1.png)
+
+![MQTTX messages](img/MQTTX-2.png)
