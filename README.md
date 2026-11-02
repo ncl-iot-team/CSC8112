@@ -21,6 +21,9 @@ Click Launch to connect
 
 ## File transfer from your computer
 
+You can use any of the following approaches.
+
+### Approach 1
 This uses VS Code's Remote Tunnels feature to connect VS Code on your own computer to the Apporto VM, so you can transfer files between them.
 
 > [!IMPORTANT]
@@ -41,6 +44,11 @@ This uses VS Code's Remote Tunnels feature to connect VS Code on your own comput
     * Select the VM's tunnel from the list (it will be named after the VM's hostname)
 7. Once connected, open the folder you want to work with on the VM (e.g. **File > Open Folder...**)
 8. You can now drag and drop files between your computer and the VM directly in the VS Code Explorer, or use the integrated terminal to copy files across
+### Approach 2
+You can login to your onedrive account from firefox using your university credentials and transfer files.
+
+### Approach 3
+If you are maintaining a personal private github repo, then you can upload the files to your repo and pull from it.
 
 ## Provided software
 
@@ -64,6 +72,13 @@ For Linux packages
 
 For Python packages
 
+Kindly create and enable a venv(virtual-env) if you need to install packages using:
+```bash
+python3 -m venv <venv-name>
+source <venv-name>/bin/activate
+pip install <package-name>
+```
+
 | Package name | Version |
 | --- | --- |
 | requests | 2.28.1 |
@@ -73,6 +88,7 @@ For Python packages
 | matplotlib | 3.6.0 |
 | tensorflow | 2.13.1 |
 | numpy | 1.24.3 |
+| ultralytics | 8.3.40
 
 ## Services within the VM
 
