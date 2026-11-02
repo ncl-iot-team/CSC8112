@@ -117,3 +117,7 @@ To check that messages are actually being published/received on your broker, use
 ![MQTTX connection](img/MQTTX-1.png)
 
 ![MQTTX messages](img/MQTTX-2.png)
+
+> [!NOTE]
+> If facing issues in typing anything in the broker, use this command to open mqttx instead and not the installed application:
+> `GTK_IM_MODULE=xim snap run mqttx`
