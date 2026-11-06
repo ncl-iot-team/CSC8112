@@ -137,3 +137,8 @@ To check that messages are actually being published/received on your broker, use
 > [!NOTE]
 > If facing issues in typing anything in the broker, use this command to open mqttx instead and not the installed application:
 > `GTK_IM_MODULE=xim snap run mqttx`
+
+### Memory Issue in installing packages
+When installing heavy dependencies (such as large machine learning, AI, or data science packages), the installation might suddenly crash, terminate with a Killed or MemoryError message, or fail with an OSError: [Errno 28] No space left on device error. Use below steps to fix:
+
+![Mem Issue](img/MemIssue.png)
